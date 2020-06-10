@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lorenz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="./lorenz.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header id="title">
+            <div class="jumbotron jumbotron-fluid" id="title">
+                <div class="container">
+                    <a href="index.html">AUSTEN GABRIELPILLAI</a>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">ABOUT</a>
+                    <a class="navbar-brand" href="#">RESEARCH</a>
+                    <a class="navbar-brand" href="#">CURRICULUM VITAE</a>
+                    <a class="navbar-brand" href="#">DATA PRODUCTS</a>
+                    <a class="navbar-brand" href="#">PERSONAL PROJECTS</a>
+                </div>
+            </nav>
+        </header>
+        <div id="main">
+            <div class="container" id="blurb">
+                <h1>Lorenz Attractor</h1>
+                <p>Shenanigans shenanigans shenanigans shenanigans shenanigans shenanigans shenanigans shenanigans.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4" id="particle-list">
+                    <div class="col-sm-6 col-md-12 col-lg-12">
+                        <h3>Particles</h3>
+                        <div class="row" id="particle-1">
+                            <h4>Particle 1</h4>
+                            <label for="xpos_1">x:</label>
+                            <input type="number" id="xpos_1" name="xpos_1" class="pos-input">
+                            <label for="ypos_1">y:</label>
+                            <input type="number" id="ypos_1" name="ypos_1" class="pos-input">
+                            <label for="zpos_1">z:</label>
+                            <input type="number" id="zpos_1" name="zpos_1" class="pos-input">
+                            <button type="button" onclick="">Set</button>
+                        </div>
+                        <div class="row" id="particle-2">
+                            <h4>Particle 2</h4>
+                            <label for="xpos_2">x:</label>
+                            <input type="number" id="xpos_2" name="xpos_2" class="pos-input">
+                            <label for="ypos_2">y:</label>
+                            <input type="number" id="ypos_2" name="ypos_2" class="pos-input">
+                            <label for="zpos_2">z:</label>
+                            <input type="number" id="zpos_2" name="zpos_2" class="pos-input">
+                            <button type="button" onclick="">Set</button>
+                        </div>
+                        <div class="row" id="particle-3">
+                            <h4>Particle 3</h4>
+                            <label for="xpos_3">x:</label>
+                            <input type="number" id="xpos_3" name="xpos_3" class="pos-input">
+                            <label for="ypos_3">y:</label>
+                            <input type="number" id="ypos_3" name="ypos_3" class="pos-input">
+                            <label for="zpos_3">z:</label>
+                            <input type="number" id="zpos_3" name="zpos_3" class="pos-input">
+                            <button type="button" onclick="">Set</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-md-12 col-lg-12">
+                        <h3>Parameters</h3>
+                        <div class="row" id="parameters">
+                            <h4>Geometric Parameter</h4>
+                            <label for="geometric">&beta;:</label>
+                            <input type="number" id="geometric" name="geometric" class="param-input">
+                            <button type="button" id="button-beta">Set</button>
+                            <h4>Rayleigh Number</h4>
+                            <label for="rayleigh">&rho;:</label>
+                            <input type="number" id="rayleigh" name="rayleigh" class="param-input">
+                            <button type="button" id="button-rho">Set</button>
+                            <h4>Prandtl Number</h4>
+                            <label for="prandtl">&sigma;:</label>
+                            <input type="number" id="prandtl" name="prandtl" class="param-input">
+                            <button type="button" id="button-sigma">Set</button>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="col-sm-1 col-md-12 col-lg-12">
+                        <div class='row' id="buttons">
+                            <button type="button" id="button-start">Start</button>
+                            <button type="button" id="button-pause">Pause</button>
+                            <button type="button" id="button-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-8 col-lg-8" id="THREE_container">
+                    <h3>3D View</h3>
+                    <div id="THREE_canvas">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h3>Coordinates</h3>
+            </div>
+            <div class="row">
+                <h3>Details</h3>
+                <p>Something something d3 three js something something Lorenz something something equations something something ODE something something Runge Kutta</p>
+            </div>
+        </div>
+       
+    </body>
+</html>
