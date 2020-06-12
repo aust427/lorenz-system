@@ -1,18 +1,9 @@
-﻿#main
-{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+﻿html, body {
+    height: 100%;
 }
 
-
-
-.slider{
+.slider {
     width: 100px;
-}
-
-.pos-input{
-    width: 55px;
 }
 
 body, html {
@@ -29,26 +20,66 @@ h1, h3 {
 }
 
 #title {
-    margin-bottom: 0;
-}
-
-#title {
     text-align: center;
     background-color: #1B2A42;
     text-decoration: none;
-    font-size: 40px;
-   // font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 0;
 }
 
-    #title a:link {
-        color: #58A4B0;
+nav {
+    background-color: #1B2A42;
+}
+
+.jumbotron {
+    font-weight: bold;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#title a:link {
+    color: #58A4B0;
+}
+
+#title a:visited {
+    color: #58A4B0;
+}
+
+#title a:hover {
+    color: #A9BCD0;
+    text-decoration: none;
+}
+
+
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        text-align: center;
     }
 
-    #title a:visited {
-        color: #58A4B0;
+    nav {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .jumbotron {
+        display: none;
     }
 
-    #title a:hover {
-        color: #A9BCD0;
-        text-decoration: none;
+    .navbar-brand {
+        font-size: 25px;
     }
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background: #1B2A42;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}

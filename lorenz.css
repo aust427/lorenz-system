@@ -1,0 +1,23 @@
+﻿#main
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.slider{
+    width: 100px;
+}
+
+.pos-input{
+    width: 51px;
+}
+
+.param-input{
+    width: 100px;
+}
+
+input{
+    height: 25px;
+}
+
